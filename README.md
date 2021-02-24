@@ -53,6 +53,7 @@ To watch a video of the application being fully demo'd please use this link: [Ap
 ## Workflow
 
 - delete first due to build errors; unexpected token ' ' bundle.js
+- filters picked: last name, country. maybe registered "date".
 
 ## Resources
 

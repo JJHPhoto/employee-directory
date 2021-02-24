@@ -1,13 +1,13 @@
-import Card from "./components/Card";
+import Body from "./components/Body";
+// import Card from "./components/Card";
 import Header from "./components/Header";
-import Search from "./components/Search";
+// import Search from "./components/Search";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Header />
-      <Search />
-      <Card />
+      <Body />
     </div>
   );
 }
