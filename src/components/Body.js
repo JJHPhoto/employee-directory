@@ -11,10 +11,13 @@ export default function Body({ users }) {
           })
 
           .map((user) => (
-            <p className="card-text">
-              {user.name.first}
-              {user.name.last}
-            </p>
+            <div>
+              <p className="card-text">
+                {user.name.first + " "}
+                {user.name.last}
+              </p>
+              <img src={user.picture.large}></img>
+            </div>
           ))}
       </div>
     </div>
