@@ -2,7 +2,7 @@ import React from "react";
 import API from "./utils/API";
 import Body from "./components/Body";
 import Header from "./components/Header";
-import Search from "./components/Search";
+import SearchForm from "./components/SearchForm";
 // import Card from "./components/Card";
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
   state = {
     search: "",
     users: [],
-    searchedUsers: [],
+    searchedUsers: null,
   };
 
   componentDidMount() {
@@ -22,25 +22,25 @@ class App extends React.Component {
       .then((employee) => {
         this.setState({
           users: employee.data.results,
-          searchedUsers: employee.data.results,
         });
       })
       .catch((err) => console.log(err));
   };
 
   handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const { value } = event.target;
+    console.log(value);
     this.setState({
-      [name]: value,
+      search: value,
     });
 
-    const searchedEmployees = this.state.searchedUsers.filter((user) => {
+    const searchedEmployees = this.state.users.filter((user) => {
       return (
         user.name.first.toLowerCase().includes(value.toLowerCase()) ||
         user.name.last.toLowerCase().includes(value.toLowerCase())
       );
     });
-    this.setState({ users: searchedEmployees });
+    this.setState({ searchedUsers: searchedEmployees });
   };
 
   handleFormSubmit = (event) => {
@@ -52,12 +52,15 @@ class App extends React.Component {
     return (
       <div className="container">
         <Header />
-        <Search
+        <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <Body users={this.state.users} />
+        <Body
+          users={this.state.users}
+          searchedUsers={this.state.searchedUsers}
+        />
       </div>
     );
   }
