@@ -3,6 +3,7 @@ import API from "./utils/API";
 import Body from "./components/Body";
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
+import Filters from "./components/Filters";
 // import Card from "./components/Card";
 
 class App extends React.Component {
@@ -57,6 +58,7 @@ class App extends React.Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
+        <Filters />
         <Body
           users={this.state.users}
           searchedUsers={this.state.searchedUsers}
