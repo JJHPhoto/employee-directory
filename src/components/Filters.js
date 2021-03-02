@@ -1,15 +1,15 @@
 import React from "react";
 
-export default function Filters() {
+export default function Filters(props) {
   return (
     <div className="card-bod">
       <form>
         <div className="form-group">
-          <label htmlFor="filterName">Filter by Name</label>
+          <label htmlFor="filterName">Sort</label>
           <input
             type="file"
             className="form-control"
-            name="search"
+            name="sort"
             id="filterName"
           />
         </div>

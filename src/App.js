@@ -3,7 +3,7 @@ import API from "./utils/API";
 import Body from "./components/Body";
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
-import Filters from "./components/Filters";
+// import Filters from "./components/Filters";
 // import Card from "./components/Card";
 
 class App extends React.Component {
@@ -12,14 +12,15 @@ class App extends React.Component {
     search: "",
     users: [],
     searchedUsers: null,
+    sort: "",
   };
 
   componentDidMount() {
     this.getUsers(" ");
   }
 
-  getUsers = (query) => {
-    API.search(query)
+  getUsers = () => {
+    API.search()
       .then((employee) => {
         this.setState({
           users: employee.data.results,
@@ -58,7 +59,7 @@ class App extends React.Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <Filters />
+        {/* <Filters sort={this.state.sort} /> */}
         <Body
           users={this.state.users}
           searchedUsers={this.state.searchedUsers}
