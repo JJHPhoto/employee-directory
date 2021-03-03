@@ -1,8 +1,8 @@
 import React from "react";
-import { CardColumns } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/Card";
 import ListGroupItem from "react-bootstrap/Card";
+import "./Body.css";
 
 export default function Body({ users, searchedUsers }) {
   const userList = searchedUsers || users;
@@ -18,12 +18,12 @@ export default function Body({ users, searchedUsers }) {
           })
 
           .map((user) => (
-            //Put Filters compenent into thead?
-            <Card style={{ width: "15rem" }}>
+            <Card style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
-                src={user.picture.thumbnail}
+                src={user.picture.large}
                 alt="profile"
+                rounded
               />
               <Card.Body>
                 <Card.Title>

@@ -1,6 +1,6 @@
 import React from "react";
 import API from "./utils/API";
-import Body from "./components/Body";
+import Body from "./components/Body/index";
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
 import Filters from "./components/Filters";
