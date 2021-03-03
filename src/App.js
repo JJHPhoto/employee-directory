@@ -3,7 +3,7 @@ import API from "./utils/API";
 import Body from "./components/Body";
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
-// import Filters from "./components/Filters";
+import Filters from "./components/Filters";
 // import Card from "./components/Card";
 
 class App extends React.Component {
@@ -50,6 +50,39 @@ class App extends React.Component {
     this.getUsers(this.state.search);
   };
 
+  //got from Danny
+  sortEmployeesFirstName = () => {
+    const employeeList = this.state.users;
+    const sortedList = employeeList.sort((a, b) => {
+      if (a.name.first < b.name.first) {
+        return -1;
+      }
+      if (a.name.first > b.name.first) {
+        return 1;
+      }
+      return 0;
+    });
+    this.setState({
+      employees: sortedList,
+    });
+  };
+
+  sortEmployeesLastName = () => {
+    const employeeList = this.state.users;
+    const sortedList = employeeList.sort((a, b) => {
+      if (a.name.last < b.name.last) {
+        return -1;
+      }
+      if (a.name.last > b.name.last) {
+        return 1;
+      }
+      return 0;
+    });
+    this.setState({
+      employees: sortedList,
+    });
+  };
+
   render() {
     return (
       <div className="container">
@@ -59,7 +92,11 @@ class App extends React.Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        {/* <Filters sort={this.state.sort} /> */}
+        <Filters
+          sort={this.state.users}
+          sortEmployeesFirstName={this.sortEmployeesFirstName}
+          sortEmployeesLastName={this.sortEmployeesLastName}
+        />
         <Body
           users={this.state.users}
           searchedUsers={this.state.searchedUsers}

@@ -16,7 +16,7 @@ export default function Body({ users, searchedUsers }) {
           .map((user) => (
             //Put Filters compenent into thead?
             <div>
-              <table className="table table-borderless">
+              <table className="table table-borderless table-dark">
                 <thead>
                   {/* <tr>
                     <th scope="col"></th>

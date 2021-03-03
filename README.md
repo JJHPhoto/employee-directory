@@ -56,6 +56,8 @@ To watch a video of the application being fully demo'd please use this link: [Ap
 - filters picked: last name, country. maybe registered "date".
 - didn't push to github pages because....
 - passed in two arrays because of "filter." A study group friend explained it to me how if you don't, you can't "go back" once you start to filter.
+- issues with filter/sort. talked to study group member and he made me realize what i needed to do.
+- deconstructing.
 
 ## Resources
 
@@ -68,6 +70,7 @@ To watch a video of the application being fully demo'd please use this link: [Ap
 My Study Group
 
 - [Bryson](https://github.com/Bryson-Palmer)
+- [Danny](https://github.com/DanZosh)
 - [Ian](https://github.com/Ianaac27)
 - [Thomas](https://github.com/Tskading)
 - [Zac](https://github.com/themancalledzac)

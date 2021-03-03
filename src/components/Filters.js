@@ -3,17 +3,19 @@ import React from "react";
 export default function Filters(props) {
   return (
     <div className="card-bod">
-      <form>
-        <div className="form-group">
-          <label htmlFor="filterName">Sort</label>
-          <input
-            type="file"
-            className="form-control"
-            name="sort"
-            id="filterName"
-          />
-        </div>
-      </form>
+      <h4>Sort by...</h4>
+      <button
+        onClick={props.sortEmployeesFirstName}
+        classname="btn btn-primary mt-3"
+      >
+        First name
+      </button>
+      <button
+        onClick={props.sortEmployeesLastName}
+        classname="btn btn-primary mt-3"
+      >
+        Last name
+      </button>
     </div>
   );
 }
