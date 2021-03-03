@@ -83,6 +83,22 @@ class App extends React.Component {
     });
   };
 
+  sortEmployeesCountry = () => {
+    const employeeList = this.state.users;
+    const sortedList = employeeList.sort((a, b) => {
+      if (a.name.last < b.name.last) {
+        return -1;
+      }
+      if (a.name.last > b.name.last) {
+        return 1;
+      }
+      return 0;
+    });
+    this.setState({
+      employees: sortedList,
+    });
+  };
+
   render() {
     return (
       <div className="container">

@@ -58,6 +58,7 @@ To watch a video of the application being fully demo'd please use this link: [Ap
 - passed in two arrays because of "filter." A study group friend explained it to me how if you don't, you can't "go back" once you start to filter.
 - issues with filter/sort. talked to study group member and he made me realize what i needed to do.
 - deconstructing.
+- table columns not right.
 
 ## Resources
 

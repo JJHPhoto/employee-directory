@@ -1,4 +1,7 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/Card";
+import ListGroupItem from "react-bootstrap/Card";
 
 export default function Body({ users, searchedUsers }) {
   const userList = searchedUsers || users;
@@ -15,33 +18,24 @@ export default function Body({ users, searchedUsers }) {
 
           .map((user) => (
             //Put Filters compenent into thead?
-            <div>
-              <table className="table table-borderless table-dark">
-                <thead>
-                  {/* <tr>
-                    <th scope="col"></th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Email</th>
-                  </tr> */}
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <img src={user.picture.large} alt="profile"></img>
-                    </td>
-                  </tr>
-                  <td>{user.name.first}</td>
-                  <td>{user.name.last}</td>
-                  <td>{user.email}</td>
-                </tbody>
-              </table>
-              {/* <p className="card-text">
-                {user.name.first + " "}
-                {user.name.last}
-              </p>
-              <img src={user.picture.large} alt="profile"></img> */}
-            </div>
+
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src={user.picture.thumbnail}
+                alt="profile"
+              />
+              <Card.Body>
+                <Card.Title>
+                  {user.name.first} {user.name.last}
+                </Card.Title>
+              </Card.Body>
+              <ListGroup className="list-group-flush">
+                <ListGroupItem>Age: {user.dob.age}</ListGroupItem>
+                <ListGroupItem>Email: {user.email}</ListGroupItem>
+                <ListGroupItem>Nationality: {user.nat}</ListGroupItem>
+              </ListGroup>
+            </Card>
           ))}
       </div>
     </div>
