@@ -6,9 +6,9 @@ export default function Header() {
       <div className="jumbotron">
         <h1 className="display-4">Employee Directory</h1>
         <p className="lead">
-          This is (company name)'s employee directory. You can search for an
-          employee by name. You can also sort them by first & last names,
-          country, age.{" "}
+          Welcome to your Employee Directory. If you would like to find out more
+          about your employees, please use the search bar. You also have the
+          ability to sort your employees by first or last name and nationaliy.
         </p>
       </div>
     </div>

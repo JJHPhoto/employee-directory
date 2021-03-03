@@ -1,15 +1,19 @@
 import React from "react";
+
+import Header from "../Header";
+
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/Card";
 import ListGroupItem from "react-bootstrap/Card";
-import "./Body.css";
 
 export default function Body({ users, searchedUsers }) {
   const userList = searchedUsers || users;
   // console.log("1111", searchedUsers, users);
   // console.log("2222", userList);
   return (
-    <div>
+    <div className="container">
+      <Header />
+
       <div className="card-body">
         <h5 className="card-title">Employees</h5>
         {userList
