@@ -86,10 +86,10 @@ class App extends React.Component {
   sortEmployeesCountry = () => {
     const employeeList = this.state.users;
     const sortedList = employeeList.sort((a, b) => {
-      if (a.name.last < b.name.last) {
+      if (a.nat < b.nat) {
         return -1;
       }
-      if (a.name.last > b.name.last) {
+      if (a.nat > b.nat) {
         return 1;
       }
       return 0;
@@ -112,6 +112,7 @@ class App extends React.Component {
           sort={this.state.users}
           sortEmployeesFirstName={this.sortEmployeesFirstName}
           sortEmployeesLastName={this.sortEmployeesLastName}
+          sortEmployeesCountry={this.sortEmployeesCountry}
         />
         <Body
           users={this.state.users}

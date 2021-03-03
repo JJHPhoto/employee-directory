@@ -16,6 +16,12 @@ export default function Filters(props) {
       >
         Last name
       </button>
+      <button
+        onClick={props.sortEmployeesCountry}
+        classname="btn btn-primary mt-3"
+      >
+        Nationality
+      </button>
     </div>
   );
 }
