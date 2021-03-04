@@ -19,12 +19,7 @@ export default function Body({ users, searchedUsers }) {
 
           .map((user) => (
             <Card style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src={user.picture.large}
-                alt="profile"
-                rounded
-              />
+              <Card.Img variant="top" src={user.picture.large} alt="profile" />
               <Card.Body>
                 <Card.Title>
                   {user.name.first} {user.name.last}
