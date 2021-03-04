@@ -1,14 +1,10 @@
 import React from "react";
 
-// import Header from "../Header";
-// import SearchForm from "../SearchForm";
-// import EmployeeCard from "../EmployeeCard";
-
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/Card";
 import ListGroupItem from "react-bootstrap/Card";
 
-export default function Body({ users, searchedUsers, search, sort }) {
+export default function Body({ users, searchedUsers }) {
   const userList = searchedUsers || users;
   // console.log("1111", searchedUsers, users);
   // console.log("2222", userList);
@@ -35,8 +31,9 @@ export default function Body({ users, searchedUsers, search, sort }) {
                 </Card.Title>
               </Card.Body>
               <ListGroup className="list-group-flush">
-                <ListGroupItem>Age: {user.dob.age}</ListGroupItem>
                 <ListGroupItem>Email: {user.email}</ListGroupItem>
+                <ListGroupItem>Phone: {user.phone}</ListGroupItem>
+                <ListGroupItem>Cell: {user.cell}</ListGroupItem>
                 <ListGroupItem>Nationality: {user.nat}</ListGroupItem>
               </ListGroup>
             </Card>

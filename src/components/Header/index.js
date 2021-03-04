@@ -6,9 +6,11 @@ export default function Header() {
       <div className="jumbotron">
         <h1 className="display-4">Employee Directory</h1>
         <p className="lead">
-          Welcome to your Employee Directory. If you would like to find out more
-          about your employees, please use the search bar. You also have the
-          ability to sort your employees by first or last name and nationaliy.
+          Welcome to your Employee Directory. You can use the search bar to find
+          ways to contact each employee as well as a few details about the
+          person you're wanting to contact. You also have the ability to sort
+          your employees by their first or last name as well as their
+          nationaliy.
         </p>
       </div>
     </div>
