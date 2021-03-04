@@ -1,9 +1,9 @@
 import React from "react";
-import API from "./utils/API";
-import Body from "./components/Body/index";
-import SearchForm from "./components/SearchForm";
-import Filters from "./components/Filters";
-import SetState from "./components/SetState";
+// import API from "./utils/API";
+// import Body from "./components/Body/index";
+// import SearchForm from "./components/SearchForm";
+// import Filters from "./components/Filters";
+import SetStateContainer from "./components/SetState";
 
 // class App extends React.Component {
 //   // create search component out of all this?
@@ -123,9 +123,9 @@ import SetState from "./components/SetState";
 
 function App() {
   return (
-    <div className="containter">
-      <SetState />
-    </div>
+    // <div className="containter">
+    <SetStateContainer />
+    // </div>
   );
 }
 

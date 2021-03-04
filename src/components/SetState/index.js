@@ -1,8 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import API from "../../utils/API";
+import Header from "../Header";
 import Body from "../Body";
+import SearchForm from "../SearchForm";
+import Filters from "../Filters";
 
-class SetState extends React.Component {
+class SetStateContainer extends Component {
   state = {
     search: "",
     users: [],
@@ -45,22 +48,76 @@ class SetState extends React.Component {
     this.getUsers(this.state.search);
   };
 
+  sortEmployeesFirstName = () => {
+    const employeeList = this.state.users;
+    const sortedList = employeeList.sort((a, b) => {
+      if (a.name.first < b.name.first) {
+        return -1;
+      }
+      if (a.name.first > b.name.first) {
+        return 1;
+      }
+      return 0;
+    });
+    this.setState({
+      employees: sortedList,
+    });
+  };
+
+  sortEmployeesLastName = () => {
+    const employeeList = this.state.users;
+    const sortedList = employeeList.sort((a, b) => {
+      if (a.name.last < b.name.last) {
+        return -1;
+      }
+      if (a.name.last > b.name.last) {
+        return 1;
+      }
+      return 0;
+    });
+    this.setState({
+      employees: sortedList,
+    });
+  };
+
+  sortEmployeesCountry = () => {
+    const employeeList = this.state.users;
+    const sortedList = employeeList.sort((a, b) => {
+      if (a.nat < b.nat) {
+        return -1;
+      }
+      if (a.nat > b.nat) {
+        return 1;
+      }
+      return 0;
+    });
+    this.setState({
+      employees: sortedList,
+    });
+  };
+
   render() {
     return (
-      // <SearchForm
-      //   search={this.state.search}
-      //   handleFormSubmit={this.handleFormSubmit}
-      //   handleInputChange={this.handleInputChange}
-      // />
-      // <Filters
-      //   sort={this.state.users}
-      //   sortEmployeesFirstName={this.sortEmployeesFirstName}
-      //   sortEmployeesLastName={this.sortEmployeesLastName}
-      //   sortEmployeesCountry={this.sortEmployeesCountry}
-      // />
-      <Body users={this.state.users} searchedUsers={this.state.searchedUsers} />
+      <div className="container">
+        <Header />
+        <SearchForm
+          search={this.state.search}
+          handleFormSubmit={this.handleFormSubmit}
+          handleInputChange={this.handleInputChange}
+        />
+        <Filters
+          sort={this.state.sort}
+          sortEmployeesFirstName={this.sortEmployeesFirstName}
+          sortEmployeesLastName={this.sortEmployeesLastName}
+          sortEmployeesCountry={this.sortEmployeesCountry}
+        />
+        <Body
+          users={this.state.users}
+          searchedUsers={this.state.searchedUsers}
+        />
+      </div>
     );
   }
 }
 
-export default SetState;
+export default SetStateContainer;
