@@ -25,7 +25,7 @@ This application lets any user search through an employee directory. This employ
 
 ![Image](./public/assets/AppSS.jpg)
 
-To watch a video of the application being fully demo'd please use this link: [Application Demo](...).
+To watch a video of the application being fully demo'd please use this link: [Application Demo](https://drive.google.com/file/d/1Ae967bBJDUEeYtoQLkMrkIpiyT8zB5IU/view).
 
 ## Technologies Used
 

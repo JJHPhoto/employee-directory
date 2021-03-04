@@ -48,7 +48,7 @@ class SetStateContainer extends Component {
     this.getUsers(this.state.search);
   };
 
-  sortEmployeesFirstName = () => {
+  filterFirstName = () => {
     const employeeList = this.state.users;
     const sortedList = employeeList.sort((a, b) => {
       if (a.name.first < b.name.first) {
@@ -64,7 +64,7 @@ class SetStateContainer extends Component {
     });
   };
 
-  sortEmployeesLastName = () => {
+  filterLastName = () => {
     const employeeList = this.state.users;
     const sortedList = employeeList.sort((a, b) => {
       if (a.name.last < b.name.last) {
@@ -80,7 +80,7 @@ class SetStateContainer extends Component {
     });
   };
 
-  sortEmployeesCountry = () => {
+  filterNat = () => {
     const employeeList = this.state.users;
     const sortedList = employeeList.sort((a, b) => {
       if (a.nat < b.nat) {
@@ -107,9 +107,9 @@ class SetStateContainer extends Component {
         />
         <Filters
           sort={this.state.sort}
-          sortEmployeesFirstName={this.sortEmployeesFirstName}
-          sortEmployeesLastName={this.sortEmployeesLastName}
-          sortEmployeesCountry={this.sortEmployeesCountry}
+          filterFirstName={this.filterFirstName}
+          filterLastName={this.filterLastName}
+          filterNat={this.filterNat}
         />
         <Body
           users={this.state.users}
