@@ -1,8 +1,8 @@
 import React from "react";
-import SetStateContainer from "./components/SetState";
+import EmployeeDirectoryContainer from "./components/EmployeeDirectoryContainer";
 
 function App() {
-  return <SetStateContainer />;
+  return <EmployeeDirectoryContainer />;
 }
 
 export default App;
