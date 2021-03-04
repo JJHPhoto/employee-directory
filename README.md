@@ -42,13 +42,23 @@ To watch a video of the application being fully demo'd please use this link: [Ap
 
 ## Workflow
 
-- delete first due to build errors; unexpected token ' ' bundle.js
-- filters picked: last name, country. maybe registered "date".
-- didn't push to github pages because....
-- passed in two arrays because of "filter." A study group friend explained it to me how if you don't, you can't "go back" once you start to filter.
-- issues with filter/sort. talked to study group member and he made me realize what i needed to do.
-- deconstructing.
-- table columns not right.
+My initial work on this project was scrapped when I kept getting an error that I couldn't resolve
+
+`unexpected token ' ' bundle.js `
+
+I trouble shot it with a study group friend and it looked like I had run
+
+`npm run build`
+
+and it was causing me issues. I don't understand why that was but there were files in my cache that I couldn't delete. After a couple hours trying to figure out the error, I decided that since I was still in the initial stage of my app, I could just make a new repo and start over.
+
+I was quickly able to get my API call working and populate the page with the number of users I wanted. I then worked with my study group on the search function of the app. I was a bit confused because the README we were given said "filter" and "sort". I kept miking up the terms in my head and I hope I didn't mess up by having the "filter" part we were told to do as my search bar.
+
+Another bit we were confused on was deploying to github pages. We asked our instructor about it. He said deploying to Heroku was fine and that he wouldn't be requirign us to deploy to github pages. He mentioned that it would be good practice to do it but if you had already deployed to Heroku, not to worry about it.
+
+The filter and sort functionality of the application was interesting. I tried to deconstruct the app as much as I could but ran into trouble. I know how to pass data down a component but got confused when it seemed like I'd have to pass the data to another component.
+
+I tried figuring it out but couldn't get it to work as I thought it should. I decided to file it away as something I'd like to try next project. However, I'd rather submit the working homework than get stuck. Similar thoughts on how the app looks. I left some CSS files in place to try and style the application at some point.
 
 ## Resources
 
